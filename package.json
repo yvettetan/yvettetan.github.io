@@ -1,0 +1,25 @@
+{
+  "name": "yvettetan.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "postcss src/styles.css -o public/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yvettetan/yvettetan.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yvettetan/yvettetan.github.io/issues"
+  },
+  "homepage": "https://github.com/yvettetan/yvettetan.github.io#readme",
+  "dependencies": {
+    "autoprefixer": "^10.3.2",
+    "daisyui": "^1.13.2",
+    "tailwindcss": "^2.2.7"
+  }
+}
