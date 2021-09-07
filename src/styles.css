@@ -3,3 +3,58 @@
 @tailwind components;
 
 @tailwind utilities;
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f3f3f3;
+}
+header, .hero {
+    background-color: #f3f3f3;
+}
+.text-dark {
+    color: #4a5666;
+}
+.bg-dark {
+    background-color: #4a5666;
+}
+h1, #logo {
+    font-family: 'Amiri', serif;
+}
+.nav-link {
+    @apply block text-sm px-2 py-4 font-semibold border-b-2 border-transparent hover:border-black cursor-pointer;
+}
+.project-container {
+    @apply border-2 rounded-md mx-auto my-4 p-4 bg-base-100 grid md:grid-flow-col md:grid-cols-2 md:grid-rows-1 gap-4
+    hover:shadow-lg hover:border-gray-500 transition-colors ease-in-out duration-100;
+}
+.project-image img {
+    @apply w-full shadow;
+}
+.project-info {
+    @apply flex flex-col justify-center;
+}
+.project-actions {
+    @apply my-4;
+}
+#other-projects {
+    @apply grid md:grid-flow-row md:grid-cols-3 md:grid-rows-3 gap-4;
+}
+.other-project-container {
+    @apply relative rounded-md overflow-hidden hover:shadow-lg;
+}
+.other-project-img img {
+    @apply w-full h-full;
+}
+.other-project-info {
+    @apply absolute w-full h-full bg-white top-0 left-0 flex flex-col justify-center items-center px-4 opacity-0 
+    hover:opacity-100 transition-opacity ease-in-out duration-200 cursor-pointer;
+}
+.other-project-title {
+    @apply mb-3 text-2xl;
+}
+.other-project-btn {
+    @apply btn btn-square btn-sm;
+}
+.btn-code {
+    @apply btn-outline;
+}
