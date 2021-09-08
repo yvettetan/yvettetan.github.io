@@ -80,15 +80,15 @@ featureProjectsArr.forEach(project => {
 const safariChessboard = new Project(
   'Safari Chessboard',
   '../src/images/chessboard-grid.png',
-  'https://github.com/yvettetan/batch8-frontend-frontend-activities/tree/main/Chessboard-grid',
-  'https://yvettetan.github.io/batch8-frontend-frontend-activities/Chessboard-grid/index.html',
+  'https://github.com/yvettetan/batch8-frontend-activities/tree/main/Chessboard-grid',
+  'https://yvettetan.github.io/batch8-frontend-activities/Chessboard-grid/index.html',
   'Themed chessboard built with animations.'
 )
 const landingPage = new Project(
   'Fix & Fogg',
   '../src/images/landingpage.png',
-  'https://github.com/yvettetan/batch8-frontend-frontend-activities/tree/main/LandingPage',
-  'https://yvettetan.github.io/batch8-frontend-frontend-activities/LandingPage/index.html',
+  'https://github.com/yvettetan/batch8-frontend-activities/tree/main/LandingPage',
+  'https://yvettetan.github.io/batch8-frontend-activities/LandingPage/index.html',
   'Unofficial product landing page for Fix & Fogg.'
 )
 const momentum = new Project(
