@@ -1,52 +1,63 @@
 const btn = document.querySelector("button.mobile-menu-button");
 const menu = document.querySelector(".mobile-menu");
 
-// Add Event Listeners
 btn.addEventListener("click", () => {
   menu.classList.toggle("hidden");
 });
 
+var navLinks = document.getElementsByClassName("nav-link");
+
+for (let i = 0; i < navLinks.length; i++) {
+  navLinks[i].addEventListener("click", function() {
+    menu.classList.toggle("hidden");
+    let current = document.getElementsByClassName("nav-active");
+    if (current.length > 0) {
+      current[0].className = current[0].className.replace(" nav-active", "");
+    }
+    this.className += " nav-active";
+  });
+}
+
 class Project {
-  constructor(title, image, code, site, about, tools = []) {
+  constructor(title, image, code, site, about) {
       this.title = title;
       this.image = image;
       this.code = code;
       this.site = site;
       this.about = about;
-      this.tools = tools;
   }
 }
-const bankBudget = new Project(
-  'Bank & Budget App',
-  '../src/images/bank.png',
-  'https://github.com/yvettetan/batch8-frontend-activities/tree/main/BankApp',
-  'https://yvettetan.github.io/batch8-frontend-activities/BankApp/login.html',
-  'An application designed for bank tellers to track customer accounts and handle common transactions.'
-)
+
 const scout = new Project(
-  'Scout: Food Expiry Tracker',
+  'Scout',
   '../src/images/scout.png',
   'https://github.com/yvettetan/batch8-frontend-activities/tree/main/Scout',
   'https://yvettetan.github.io/batch8-frontend-activities/Scout/index.html#',
-  'A multi-featured food tracking application that helps users to reduce food waste at home.'
+  'A multi-featured food tracking application built with Javascript that helps users to reduce food waste at home.'
 )
 const epilogue = new Project(
   'EPILOGUE',
   '../src/images/epilogue.png',
   'https://github.com/yvettetan/blog-app',
   'http://theblog16.herokuapp.com/',
-  'A book review blog that allows users to view and comment on articles.'
+  'A Ruby on Rails book review blog that allows users to view and comment on articles created by the admin author.',
 )
 const takenote = new Project(
-  'TakeNote.',
+  'Take Note',
   '../src/images/takenote.png',
   'https://github.com/yvettetan/journal-app',
   'https://take-note36.herokuapp.com/',
-  'A task management app that allows users to track their own tasks.'
+  'A task management app built with Ruby on Rails that allows users to track their own tasks.',
+)
+const stockit = new Project(
+  'Stockit',
+  '../src/images/stockit.png',
+  'https://github.com/yvettetan/stock-trading-app',
+  'https://stockit1.herokuapp.com/',
+  'A Ruby on Rails virtual stock trading app that enables users to sign up as a broker or buyer to manage their stocks. Integrates with the IEX Cloud API to retrieve company information and real-time stock prices.',
 )
 
-const featureProjectsArr = [takenote, epilogue, scout, bankBudget];
-
+const featureProjectsArr = [stockit, takenote, epilogue, scout];
 
 const featureProjects = document.getElementById('feature-projects');
 
@@ -55,20 +66,27 @@ featureProjectsArr.forEach(project => {
   projectContainer.className = 'project-container';
   projectContainer.innerHTML = 
   `<div class="project-info card-body p-4">
-    <div class="card-title"><h1 class='text-2xl'>${project.title}</h1></div> 
+    <div class="card-title">
+      <h1 class='text-2xl'>${project.title}</h1>
+    </div> 
     <p>${project.about}</p> 
     <div class="project-actions">
-      <a href="${project.site}" target="_blank"><button class="btn btn-primary">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-      </svg>
-      &nbsp;Preview Site</button></a>
-      <a href="${project.code}" target="_blank"><button class="btn btn-code">
-       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-        </svg>
-        &nbsp;View code
-      </button></a>
+      <a href="${project.site}" target="_blank">
+        <button class="btn btn-primary mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+          &nbsp;Preview Site
+        </button>
+      </a>
+      <a href="${project.code}" target="_blank">
+        <button class="btn btn-code">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+          </svg>
+          &nbsp;View code
+        </button>
+      </a>
     </div>
   </div>
   <figure class='project-image'>
@@ -112,7 +130,14 @@ const tictactoe = new Project(
   'https://yvettetan.github.io/batch8-frontend-activities/TicTacToe/index.html',
   'Challenge a friend to a classic game of Tic Tac Toe.'
 )
-const otherProjectsArr = [safariChessboard, landingPage, momentum, quizGame, tictactoe];
+const bankBudget = new Project(
+  'Bank & Budget App',
+  '../src/images/bank.png',
+  'https://github.com/yvettetan/batch8-frontend-activities/tree/main/BankApp',
+  'https://yvettetan.github.io/batch8-frontend-activities/BankApp/login.html',
+  'Developed for bank tellers to view customer accounts and manage common transactions'
+)
+const otherProjectsArr = [safariChessboard, landingPage, momentum, quizGame, tictactoe, bankBudget];
 
 const otherProjects = document.getElementById('other-projects');
 
