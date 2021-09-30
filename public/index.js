@@ -30,28 +30,28 @@ class Project {
 
 const scout = new Project(
   'Scout',
-  '../src/images/scout.png',
+  './src/images/scout.png',
   'https://github.com/yvettetan/batch8-frontend-activities/tree/main/Scout',
   'https://yvettetan.github.io/batch8-frontend-activities/Scout/index.html#',
   'A multi-featured food tracking application built with Javascript that helps users to reduce food waste at home.'
 )
 const epilogue = new Project(
   'EPILOGUE',
-  '../src/images/epilogue.png',
+  './src/images/epilogue.png',
   'https://github.com/yvettetan/blog-app',
   'http://theblog16.herokuapp.com/',
   'A Ruby on Rails book review blog that allows users to view and comment on articles created by the admin author.',
 )
 const takenote = new Project(
   'Take Note',
-  '../src/images/takenote.png',
+  './src/images/takenote.png',
   'https://github.com/yvettetan/journal-app',
   'https://take-note36.herokuapp.com/',
   'A task management app built with Ruby on Rails that allows users to track their own tasks.',
 )
 const stockit = new Project(
   'Stockit',
-  '../src/images/stockit.png',
+  './src/images/stockit.png',
   'https://github.com/yvettetan/stock-trading-app',
   'https://stockit1.herokuapp.com/',
   'A Ruby on Rails virtual stock trading app that enables users to sign up as a broker or buyer to manage their stocks. Integrates with the IEX Cloud API to retrieve company information and real-time stock prices.',
@@ -97,42 +97,42 @@ featureProjectsArr.forEach(project => {
 
 const safariChessboard = new Project(
   'Safari Chessboard',
-  '../src/images/chessboard-grid.png',
+  './src/images/chessboard-grid.png',
   'https://github.com/yvettetan/batch8-frontend-activities/tree/main/Chessboard-grid',
   'https://yvettetan.github.io/batch8-frontend-activities/Chessboard-grid/index.html',
   'Themed chessboard built with animations.'
 )
 const landingPage = new Project(
   'Fix & Fogg',
-  '../src/images/landingpage.png',
+  './src/images/landingpage.png',
   'https://github.com/yvettetan/batch8-frontend-activities/tree/main/LandingPage',
   'https://yvettetan.github.io/batch8-frontend-activities/LandingPage/index.html',
   'Unofficial product landing page for Fix & Fogg.'
 )
 const momentum = new Project(
   'Momentum',
-  '../src/images/momentum.png',
+  './src/images/momentum.png',
   'https://github.com/yvettetan/batch8-frontend-activities/tree/main/MomentumApp',
   'https://yvettetan.github.io/batch8-frontend-activities/MomentumApp/index.html',
   'Create a to-do list and find inspiration through quotes.'
 )
 const quizGame = new Project(
   'Quiz Game',
-  '../src/images/quizgame.png',
+  './src/images/quizgame.png',
   'https://github.com/yvettetan/batch8-frontend-activities/tree/main/QuizGame',
   'https://yvettetan.github.io/batch8-frontend-activities/QuizGame/index.html',
   'Test your film knowledge. Try to achieve 5 correct answers in a row!'
 )
 const tictactoe = new Project(
   'Tic Tac Toe',
-  '../src/images/tictactoe.png',
+  './src/images/tictactoe.png',
   'https://github.com/yvettetan/batch8-frontend-activities/tree/main/TicTacToe',
   'https://yvettetan.github.io/batch8-frontend-activities/TicTacToe/index.html',
   'Challenge a friend to a classic game of Tic Tac Toe.'
 )
 const bankBudget = new Project(
   'Bank & Budget App',
-  '../src/images/bank.png',
+  './src/images/bank.png',
   'https://github.com/yvettetan/batch8-frontend-activities/tree/main/BankApp',
   'https://yvettetan.github.io/batch8-frontend-activities/BankApp/login.html',
   'Developed for bank tellers to view customer accounts and manage common transactions'
